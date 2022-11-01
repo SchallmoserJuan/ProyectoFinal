@@ -102,6 +102,7 @@ public class View extends javax.swing.JFrame implements Observer{
         jScrollPane1 = new javax.swing.JScrollPane();
         textVacuna = new javax.swing.JList<>();
         jLabel7 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         textBuscar = new javax.swing.JTextField();
@@ -112,6 +113,8 @@ public class View extends javax.swing.JFrame implements Observer{
         jLabel6 = new javax.swing.JLabel();
         dr = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -120,9 +123,11 @@ public class View extends javax.swing.JFrame implements Observer{
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Nombre");
+        jLabel1.setToolTipText("");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 43, -1, -1));
         jPanel1.add(textNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 66, 186, -1));
 
@@ -205,6 +210,9 @@ public class View extends javax.swing.JFrame implements Observer{
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/medical-report.png"))); // NOI18N
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 60, -1, -1));
 
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cool-background (2).png"))); // NOI18N
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(-7, 0, 450, 600));
+
         jPanel2.setBackground(new java.awt.Color(0, 153, 204));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED), "Lista de Pacientes", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -216,7 +224,6 @@ public class View extends javax.swing.JFrame implements Observer{
         jLabel9.setVerifyInputWhenFocusTarget(false);
         jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, 20, 20));
         jLabel9.getAccessibleContext().setAccessibleDescription("");
-        jLabel9.getAccessibleContext().setAccessibleParent(dr);
 
         jPanel2.add(textBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 140, -1));
 
@@ -239,7 +246,7 @@ public class View extends javax.swing.JFrame implements Observer{
         });
         jScrollPane2.setViewportView(Tabla);
 
-        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 140, 480, 440));
+        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 140, 480, 420));
 
         jButton4.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/magnifying-glass.png"))); // NOI18N
@@ -275,6 +282,15 @@ public class View extends javax.swing.JFrame implements Observer{
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/report (2).png"))); // NOI18N
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 30, -1, -1));
 
+        jLabel10.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/idea.png"))); // NOI18N
+        jLabel10.setText("Consejo: Haz doble click en el registro que necesites modificar");
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 570, -1, -1));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cool-background (2).png"))); // NOI18N
+        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(-7, 0, 520, 600));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -282,7 +298,7 @@ public class View extends javax.swing.JFrame implements Observer{
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 516, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -426,6 +442,9 @@ public class View extends javax.swing.JFrame implements Observer{
     private javax.swing.JButton jButton5;
     private com.toedter.calendar.JDateChooser jDateFecha;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
